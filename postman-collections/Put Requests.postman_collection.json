@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "334bae50-ca42-429b-94be-5db41e098910",
+		"name": "Put Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43507465",
+		"_collection_link": "https://cloudy-shadow-447926.postman.co/workspace/investigaci%25C3%25B3n-cloud~509703c6-2f4b-4936-b39c-1efa96d60c72/collection/43507465-334bae50-ca42-429b-94be-5db41e098910?action=share&source=collection_link&creator=43507465"
+	},
+	"item": [
+		{
+			"name": "Update Chocolate Price",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/update/6817f024-3bc5-40e4-afe4-969a4fc631c5/price?price=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"update",
+						"6817f024-3bc5-40e4-afe4-969a4fc631c5",
+						"price"
+					],
+					"query": [
+						{
+							"key": "price",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product/update/23a0f6d9-24d0-4f15-ae09-a92728ae36d9/price?price=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"update",
+								"23a0f6d9-24d0-4f15-ae09-a92728ae36d9",
+								"price"
+							],
+							"query": [
+								{
+									"key": "price",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 02:33:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Chocolate\",\n    \"stock\": 910,\n    \"price\": 10\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Chocolate Stock",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product/update/6817f024-3bc5-40e4-afe4-969a4fc631c5/stock?stock=909",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"update",
+						"6817f024-3bc5-40e4-afe4-969a4fc631c5",
+						"stock"
+					],
+					"query": [
+						{
+							"key": "stock",
+							"value": "909"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product/update/23a0f6d9-24d0-4f15-ae09-a92728ae36d9/stock?stock=909",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"update",
+								"23a0f6d9-24d0-4f15-ae09-a92728ae36d9",
+								"stock"
+							],
+							"query": [
+								{
+									"key": "stock",
+									"value": "909"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 02:34:15 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Chocolate\",\n    \"stock\": 909,\n    \"price\": 10\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Chocolate Name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product/update/6817f024-3bc5-40e4-afe4-969a4fc631c5/name?name=Chocolaate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"update",
+						"6817f024-3bc5-40e4-afe4-969a4fc631c5",
+						"name"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Chocolaate"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product/update/23a0f6d9-24d0-4f15-ae09-a92728ae36d9/name?name=Chocolaate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"update",
+								"23a0f6d9-24d0-4f15-ae09-a92728ae36d9",
+								"name"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Chocolaate"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 02:34:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Chocolaate\",\n    \"stock\": 909,\n    \"price\": 10\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Detergent",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Detergent\",\n    \"stock\": 199,\n    \"price\": 8\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/update/d8b50313-84de-4ea8-82ae-de85f584d734",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"update",
+						"d8b50313-84de-4ea8-82ae-de85f584d734"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Detergent\",\n    \"stock\": 199,\n    \"price\": 8\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product/update/3198c696-8a2c-49f4-853e-30f6702668c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"update",
+								"3198c696-8a2c-49f4-853e-30f6702668c7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 02:35:08 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Detergent\",\n    \"stock\": 199,\n    \"price\": 8\n}"
+				}
+			]
+		},
+		{
+			"name": "Should return 500 (ProductAlreadyExistsException)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    // somehow the owners have decided that Detergent's new name is going to be Chocolaate.\n    \"name\": \"Chocolaate\",\n    \"stock\": 199,\n    \"price\": 8\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/update/d8b50313-84de-4ea8-82ae-de85f584d734",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"update",
+						"d8b50313-84de-4ea8-82ae-de85f584d734"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    // somehow the owners have decided that the new name for Deterget will be Chocolaate.\n    \"name\": \"Chocolaate\",\n    \"stock\": 199,\n    \"price\": 8\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product/update/3198c696-8a2c-49f4-853e-30f6702668c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"update",
+								"3198c696-8a2c-49f4-853e-30f6702668c7"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 02:36:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2025-08-27T02:36:44.697+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/api/product/update/3198c696-8a2c-49f4-853e-30f6702668c7\"\n}"
+				}
+			]
+		}
+	]
+}

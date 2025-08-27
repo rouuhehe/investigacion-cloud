@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 @Service
@@ -63,7 +64,11 @@ public class ProductService {
 
         existingProd.setPrice(newProduct.price());
         existingProd.setStock(newProduct.stock());
-        ensureNameIsUnique(newProduct.name());
+
+        if(Objects.equals(existingProd.getName(), newProduct.name())){
+            existingProd.setName(newProduct.name());
+        } else ensureNameIsUnique(newProduct.name());
+
         existingProd.setName(newProduct.name());
 
         return productRepository.save(existingProd);

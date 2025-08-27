@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "7936b4de-f078-4d45-be19-bd2558a90d24",
+		"name": "Get Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43507465",
+		"_collection_link": "https://cloudy-shadow-447926.postman.co/workspace/investigaci%25C3%25B3n-cloud~509703c6-2f4b-4936-b39c-1efa96d60c72/collection/43507465-7936b4de-f078-4d45-be19-bd2558a90d24?action=share&source=collection_link&creator=43507465"
+	},
+	"item": [
+		{
+			"name": "List All Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Detergente Marcella\",\n    \"stock\": 1000,\n    \"price\": 7.60\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By Name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Detergente Marcella\",\n    \"stock\": 1000,\n    \"price\": 7.60\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/name/Detergent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"name",
+						"Detergent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By Id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Should return 500 (ProductNotFoundException)",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

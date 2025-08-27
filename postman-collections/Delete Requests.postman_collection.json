@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "d80b61f4-0266-4416-b43e-1827ec84040a",
+		"name": "Delete Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43507465",
+		"_collection_link": "https://cloudy-shadow-447926.postman.co/workspace/investigaci%25C3%25B3n-cloud~509703c6-2f4b-4936-b39c-1efa96d60c72/collection/43507465-d80b61f4-0266-4416-b43e-1827ec84040a?action=share&source=collection_link&creator=43507465"
+	},
+	"item": [
+		{
+			"name": "Delete Product By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product/6817f024-3bc5-40e4-afe4-969a4fc631c5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"6817f024-3bc5-40e4-afe4-969a4fc631c5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product/3198c696-8a2c-49f4-853e-30f6702668c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"3198c696-8a2c-49f4-853e-30f6702668c7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 02:37:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Should return 500 (ProductNotFoundException)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product/6817f024-3bc5-40e4-afe4-969a4fc631c5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"6817f024-3bc5-40e4-afe4-969a4fc631c5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product/6817f024-3bc5-40e4-afe4-969a4fc631c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"6817f024-3bc5-40e4-afe4-969a4fc631c5"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 02:37:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2025-08-27T02:37:28.212+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/api/product/6817f024-3bc5-40e4-afe4-969a4fc631c5\"\n}"
+				}
+			]
+		}
+	]
+}

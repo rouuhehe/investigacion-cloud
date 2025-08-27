@@ -40,7 +40,7 @@ public class ProductController {
         return productMapper.toDto(productService.getProductByName(name));
     }
 
-    @PostMapping
+    @PostMapping("/new")
     public ProductDTO createProduct(@RequestBody ProductDTO productDTO)
             throws ProductAlreadyExistsException {
         return productMapper.toDto(productService.createProduct(productDTO));
@@ -75,7 +75,8 @@ public class ProductController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteProductById(@PathVariable UUID id) throws ProductNotFoundException {
+    public void deleteProductById(@PathVariable UUID id)
+            throws ProductNotFoundException {
         productService.deleteProduct(id);
     }
 
