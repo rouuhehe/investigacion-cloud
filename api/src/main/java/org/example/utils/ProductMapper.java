@@ -4,7 +4,6 @@ import org.example.product.domain.Product;
 import org.example.product.dto.ProductDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
-import org.springframework.stereotype.Repository;
 
 @Mapper(componentModel = "spring")
 public interface ProductMapper {

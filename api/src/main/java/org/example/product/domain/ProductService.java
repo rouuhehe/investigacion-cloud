@@ -18,11 +18,17 @@ public class ProductService {
     private final ProductRepository productRepository;
     private final ProductMapper productMapper;
 
-    public Product getProductByProductId(UUID productId) throws ProductNotFoundException {
+    private void ensureNameIsUnique(String name) throws ProductAlreadyExistsException {
+        if (productRepository.findProductByName(name) != null) {
+            throw new ProductAlreadyExistsException();
+        }
+    }
+
+    public Product getProductById(UUID productId) throws ProductNotFoundException {
         return productRepository.findById(productId).orElseThrow(ProductNotFoundException::new);
     }
 
-    public Product getProductByProductName(String productName) throws ProductNotFoundException {
+    public Product getProductByName(String productName) throws ProductNotFoundException {
         Product prod = productRepository.findProductByName(productName);
         if (prod == null) throw new ProductNotFoundException();
         return prod;
@@ -31,8 +37,8 @@ public class ProductService {
     public Product updateProductName(UUID id, String name) throws ProductNotFoundException, ProductAlreadyExistsException {
         Product existingProd = productRepository.findById(id)
                 .orElseThrow(ProductNotFoundException::new);
-        if(productRepository.findProductByName(name) != null) throw new ProductAlreadyExistsException();
 
+        ensureNameIsUnique(name);
         existingProd.setName(name);
         return productRepository.save(existingProd);
     }
@@ -51,10 +57,20 @@ public class ProductService {
         return productRepository.save(existingProd);
     }
 
-    public Product createProduct(ProductDTO productDTO) throws ProductAlreadyExistsException {
-        Product prod = productRepository.findProductByName(productDTO.name());
-        if (prod != null) throw new ProductAlreadyExistsException();
+    public Product updateProduct(UUID id, ProductDTO newProduct) throws ProductNotFoundException, ProductAlreadyExistsException {
+        Product existingProd = productRepository.findById(id)
+                .orElseThrow(ProductNotFoundException::new);
 
+        existingProd.setPrice(newProduct.price());
+        existingProd.setStock(newProduct.stock());
+        ensureNameIsUnique(newProduct.name());
+        existingProd.setName(newProduct.name());
+
+        return productRepository.save(existingProd);
+    }
+
+    public Product createProduct(ProductDTO productDTO) throws ProductAlreadyExistsException {
+        ensureNameIsUnique(productDTO.name());
         Product product = productMapper.toEntity(productDTO);
         return productRepository.save(product);
     }
