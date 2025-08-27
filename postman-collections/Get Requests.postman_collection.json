@@ -33,7 +33,59 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "List All Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Detergente Marcella\",\n    \"stock\": 1000,\n    \"price\": 7.60\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 02:15:54 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"Detergent\",\n        \"stock\": 1000,\n        \"price\": 7.6\n    },\n    {\n        \"name\": \"Detergent1\",\n        \"stock\": 199,\n        \"price\": 8\n    },\n    {\n        \"name\": \"Laptop\",\n        \"stock\": 100,\n        \"price\": 2000.999\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Get Product By Name",
@@ -62,7 +114,60 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Detergente Marcella\",\n    \"stock\": 1000,\n    \"price\": 7.60\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product/name/Detergent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"name",
+								"Detergent"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 01:54:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Detergent\",\n    \"stock\": 1000,\n    \"price\": 7.6\n}"
+				}
+			]
 		},
 		{
 			"name": "Get Product By Id",
@@ -70,7 +175,56 @@
 				"method": "GET",
 				"header": []
 			},
-			"response": []
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product/uuid/23a0f6d9-24d0-4f15-ae09-a92728ae36d9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"uuid",
+								"23a0f6d9-24d0-4f15-ae09-a92728ae36d9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 02:59:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Chocolaate\",\n    \"stock\": 909,\n    \"price\": 10\n}"
+				}
+			]
 		},
 		{
 			"name": "Should return 500 (ProductNotFoundException)",
@@ -78,7 +232,56 @@
 				"method": "GET",
 				"header": []
 			},
-			"response": []
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Detergente Marcella\",\n    \"stock\": 1000,\n    \"price\": 7.60\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product/uuid/3198c696-8a2c-49f4-853e-30f6702668c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"uuid",
+								"3198c696-8a2c-49f4-853e-30f6702668c7"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Aug 2025 02:59:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2025-08-27T02:59:27.969+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"path\": \"/api/product/uuid/3198c696-8a2c-49f4-853e-30f6702668c7\"\n}"
+				}
+			]
 		}
 	]
 }
