@@ -1,0 +1,4 @@
+encryptionsalt: v1:gvg1/cvvBPI=:v1:x3dKewBSbu5pCcle:XcinLwguSlcJKEVvJXVLbpCY1rg+hg==
+config:
+  api-students-fargate:image: gonzalovalladolid/api-students:latest
+  api-students-fargate:executionRoleArn: arn:aws:iam::210364787680:role/LabRole
